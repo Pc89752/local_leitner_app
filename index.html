@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Leitner Flashcard App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <header class="control-panel">
+            <div class="upload-section">
+                <label for="json-uploader" class="upload-label">Upload JSON File</label>
+                <input type="file" id="json-uploader" accept=".json">
+            </div>
+
+            <div class="filter-section">
+                <label for="domain-select">Domain:</label>
+                <select id="domain-select">
+                    <option value="all">All Domains</option>
+                </select>
+            </div>
+
+            <div class="progress-section">
+                <p id="progress-tracker">Cards remaining: 0</p>
+            </div>
+        </header>
+
+        <hr>
+
+        <main class="card-display">
+            <div class="flashcard" id="flashcard-box">
+                <div class="card-question">
+                    <p id="question-text">Please upload a valid JSON file to get started.</p>
+                </div>
+
+                <div class="card-options" id="options-container">
+                </div>
+            </div>
+
+            <div class="action-section">
+                <button id="next-btn" hidden>Next Card</button>
+            </div>
+        </main>
+
+        <hr>
+
+        <footer class="dashboard-panel">
+            <div class="dashboard-title">Mastery Progress</div>
+            <div class="box-counters">
+                <div class="counter-badge b1">Box 1: <span id="box1-count">0</span></div>
+                <div class="counter-badge b2">Box 2: <span id="box2-count">0</span></div>
+                <div class="counter-badge b3">Box 3: <span id="box3-count">0</span></div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
