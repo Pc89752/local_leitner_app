@@ -1,218 +1,228 @@
 /* --- Global Resets & Mobile-First Setup --- */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f5f7fa;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 16px;
-    -webkit-text-size-adjust: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 16px;
+  -webkit-text-size-adjust: 100%;
 }
 
 /* --- Native Mobile App Shell --- */
 .app-container {
-    width: 100%;
-    max-width: 480px;
-    height: 92vh;
-    max-height: 850px;
-    background-color: #ffffff;
-    border-radius: 24px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    padding: 20px;
+  width: 100%;
+  max-width: 480px;
+  height: 92vh;
+  max-height: 850px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
 }
 
 hr {
-    border: 0;
-    border-top: 1px solid #eaeaea;
-    margin: 12px 0;
+  border: 0;
+  border-top: 1px solid #eaeaea;
+  margin: 12px 0;
 }
 
 /* --- 1. The Control Panel (Top) --- */
 .control-panel {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.upload-section, .filter-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 0.95rem;
+.upload-section,
+.filter-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.95rem;
 }
 
 .upload-label {
-    background-color: #f0f2f5;
-    padding: 8px 14px;
-    border-radius: 8px;
-    font-weight: 500;
-    cursor: pointer;
-    touch-action: manipulation; /* Prevents double-tap zoom triggers */
+  background-color: #f0f2f5;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  touch-action: manipulation; /* Prevents double-tap zoom triggers */
 }
 
 #json-uploader {
-    display: none;
+  display: none;
 }
 
 #domain-select {
-    padding: 8px 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    width: 60%;
-    font-size: 0.95rem;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  width: 60%;
+  font-size: 0.95rem;
 }
 
 .progress-section {
-    text-align: center;
-    font-weight: 600;
-    color: #666;
-    font-size: 0.9rem;
+  text-align: center;
+  font-weight: 600;
+  color: #666;
+  font-size: 0.9rem;
 }
 
 /* --- 2. The Card Display (Middle) --- */
 .card-display {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 16px;
-    overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  overflow-y: auto;
 }
 
 .flashcard {
-    background-color: #fff;
-    border: 2px solid #e1e4e8;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  background-color: #fff;
+  border: 2px solid #e1e4e8;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
 }
 
 #question-text {
-    font-size: 1.15rem;
-    font-weight: 600;
-    line-height: 1.4;
-    text-align: center;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
 }
 
 /* Add descriptive emphasis for victory views */
 .victory-title {
-    font-size: 1.4rem;
-    margin-bottom: 8px;
-    color: #2ecc71;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: #2ecc71;
 }
 .victory-subtitle {
-    font-size: 0.95rem;
-    color: #666;
-    font-weight: normal;
+  font-size: 0.95rem;
+  color: #666;
+  font-weight: normal;
 }
 
 .card-options {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
 }
 
 /* Thumb-Friendly Target Button Interface */
 .option-btn {
-    width: 100%;
-    min-height: 50px;
-    padding: 12px 16px;
-    font-size: 0.95rem;
-    text-align: left;
-    background-color: #f8f9fa;
-    border: 1px solid #dcdfe6;
-    border-radius: 12px;
-    cursor: pointer;
-    touch-action: manipulation; /* Instant tap processing on mobile viewports */
-    transition: background-color 0.15s ease, border-color 0.15s ease;
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  text-align: left;
+  background-color: #f8f9fa;
+  border: 1px solid #dcdfe6;
+  border-radius: 12px;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Dynamic State Interactions */
 .option-btn:not(:disabled):active {
-    background-color: #eef1f6 !important;
-    transform: scale(0.99);
+  background-color: #eef1f6 !important;
+  transform: scale(0.98);
 }
 
 .option-btn.correct-flash {
-    background-color: #e8f8f0 !important;
-    border-color: #2ecc71 !important;
-    color: #1e7e34;
-    font-weight: 600;
+  background-color: #10b981 !important;
+  border-color: #059669 !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 
 .option-btn.incorrect-flash {
-    background-color: #fce8e6 !important;
-    border-color: #e74c3c !important;
-    color: #c0392b;
+  background-color: #ef4444 !important;
+  border-color: #dc2626 !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
 }
 
 #next-btn {
-    width: 100%;
-    height: 50px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #fff;
-    background-color: #4a90e2;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    touch-action: manipulation;
+  width: 100%;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 #next-btn:active {
-    filter: brightness(0.85);
-    transform: scale(0.99);
+  filter: brightness(0.85);
+  transform: scale(0.99);
 }
 
 /* --- 3. Mini Progress Dashboard (Bottom) --- */
 .dashboard-panel {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 4px;
 }
 
 .dashboard-title {
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #95a5a6;
-    letter-spacing: 0.5px;
-    text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #95a5a6;
+  letter-spacing: 0.5px;
+  text-align: center;
 }
 
 .box-counters {
-    display: flex;
-    gap: 8px;
+  display: flex;
+  gap: 8px;
 }
 
 .counter-badge {
-    flex: 1;
-    text-align: center;
-    padding: 6px 4px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    border-radius: 8px;
-    color: #fff;
+  flex: 1;
+  text-align: center;
+  padding: 6px 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 8px;
+  color: #fff;
 }
 
-.b1 { background-color: #e74c3c; } /* Box 1: Critical Red */
-.b2 { background-color: #f39c12; } /* Box 2: Warning Amber */
-.b3 { background-color: #2ecc71; } /* Box 3: Mastered Green */
+.b1 {
+  background-color: #e74c3c;
+} /* Box 1: Critical Red */
+.b2 {
+  background-color: #f39c12;
+} /* Box 2: Warning Amber */
+.b3 {
+  background-color: #2ecc71;
+} /* Box 3: Mastered Green */
 
 [hidden] {
-    display: none !important;
+  display: none !important;
 }
