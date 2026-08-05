@@ -251,7 +251,7 @@ function handleOptionSelection(selectedButton, currentCard) {
     selectedButton.classList.add("incorrect-flash");
 
     options.forEach((btn) => {
-      if (btn.value === ansNo) {
+      if (parseInt(btn.value, 10) === ansNo) {
         btn.classList.add("correct-flash");
       }
     });
