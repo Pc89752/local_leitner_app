@@ -251,7 +251,6 @@ function handleOptionSelection(selectedButton, currentCard) {
     selectedButton.classList.add("incorrect-flash");
 
     options.forEach((btn) => {
-    alert("Checking button value:", btn.value, "against ansNo:", ansNo);
       if (parseInt(btn.value, 10) === ansNo) {
 btn.classList.add("correct-flash");
       }
